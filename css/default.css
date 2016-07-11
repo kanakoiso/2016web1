@@ -1,23 +1,54 @@
-/* :::::: slide :::::: */
- 
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
 #wrapper {
-  overflow: hidden;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
  
+[name="switch"] {
+  display: none;
+}
+ 
+/* :::::: button :::::: */
+ 
+/* 略 */
+ 
+/* :::::: contents :::::: */
+ 
 .tabContents {
-  width: 500%;
-  -webkit-transition: -webkit-transform 0.6s;
-  transition: transform 0.6s;
+  position: relative;
 }
  
 .tabContents section {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+}
+ 
+.tabContents figure {
+  overflow: hidden;
+}
+ 
+.tabContents figure img {
   float: left;
-  width: 20%;
-  opacity: 0.1;
-  transition: opacity 0.3s;
+  max-width: 50%;
+  margin-right: 20px;
+}
+ 
+.tabContents figcaption {
+  font-size: 12px;
+  line-height: 1.8;
 }
  
 /* :::::: mechanism :::::: */
+ 
+.tabContents section {
+  opacity: 0.1;
+  transition: opacity 0.3s;
+}
  
 #tab-1:checked ~ .tabBtn li [for="tab-1"],
 #tab-2:checked ~ .tabBtn li [for="tab-2"],
@@ -35,10 +66,3 @@
   opacity: 1;
   background-color: #fff;
 }
- 
-#tab-1:checked ~ .tabContents { -webkit-transform: translateX(0); transform: translateX(0); }
-#tab-2:checked ~ .tabContents { -webkit-transform: translateX(-20%); transform: translateX(-20%); }
-#tab-3:checked ~ .tabContents { -webkit-transform: translateX(-40%); transform: translateX(-40%); }
-#tab-4:checked ~ .tabContents { -webkit-transform: translateX(-60%); transform: translateX(-60%); }
-#tab-5:checked ~ .tabContents { -webkit-transform: translateX(-80%); transform: translateX(-80%); }
-
