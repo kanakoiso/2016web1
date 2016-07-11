@@ -3,14 +3,57 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>CSS Animation - 横にスライドして切り替わるタブコンテンツ</title>
+<title>課題</title>
 <meta name="viewport" content="width=device-width">
 <link rel="stylesheet" href="../css/normalize.min.css">
 <link rel="stylesheet" href="../css/sample.css">
 </head>
 <body>
- 
-<!-- HTMLは前述のと同じ -->
- 
+<div id="wrapper">
+  <input type="radio" name="switch" id="tab-1" checked>
+  <input type="radio" name="switch" id="tab-2">
+  <input type="radio" name="switch" id="tab-3">
+  <input type="radio" name="switch" id="tab-4">
+  <input type="radio" name="switch" id="tab-5">
+  <ul class="tabBtn">
+    <li><label for="tab-1">タブ1</label></li>
+    <li><label for="tab-2">タブ2</label></li>
+    <li><label for="tab-3">タブ3</label></li>
+    <li><label for="tab-4">タブ4</label></li>
+    <li><label for="tab-5">タブ5</label></li>
+  </ul>
+  <div class="tabContents">
+    <section>
+      <figure>
+        <img src=".png">
+        <figcaption>わ
+      </figure>
+    </section>
+    <section>
+      <figure>
+        <img src=".jpg">
+        <figcaption>ﾌｩ
+      </figure>
+    </section>
+    <section>
+      <figure>
+        <img src=".jpg">
+        <figcaption>ワァ
+      </figure>
+    </section>
+    <section>
+      <figure>
+        <img src=".jpg">
+        <figcaption>ワァ
+      </figure>
+    </section>
+    <section>
+      <figure>
+        <img src=".jpg">
+        <figcaption>オワァ
+      </figure>
+    </section>
+  </div>
+</div>
 </body>
 </html>
