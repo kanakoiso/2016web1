@@ -6,62 +6,45 @@
   -moz-box-sizing: border-box;
 }
  
-[name="switch"] {
-  display: none;
-}
- 
 /* :::::: button :::::: */
  
-/* 略 */
- 
-/* :::::: contents :::::: */
- 
-.tabContents {
-  position: relative;
-}
- 
-.tabContents section {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  width: 100%;
-  padding: 20px;
-  background-color: #fff;
-}
- 
-.tabContents figure {
-  overflow: hidden;
-}
- 
-.tabContents figure img {
-  float: left;
-  max-width: 50%;
-  margin-right: 20px;
-}
- 
-.tabContents figcaption {
-  font-size: 12px;
-  line-height: 1.8;
-}
- 
 .tabBtn {
-  position: relative;
-  z-index: 1;
+  display: table;
+  width: 100%;
+  margin: 0 0 1px;
+  padding: 0;
 }
-
-#wrapper {
-  overflow: hidden;
-}
-
-.tabContents {
-  width: 500%;
-  -webkit-transition: -webkit-transform 0.6s;
-  transition: transform 0.6s;
-}
-
-.tabContents section {
-  float: left;
+ 
+.tabBtn li {
+  display: table-cell;
   width: 20%;
+  border-right: 1px solid #fff;
+  background-color: #20b2aa;
+  text-align: center;
+  vertical-align: middle;
+}
+ 
+.tabBtn li:last-child {
+  border-right: 0;
+}
+ 
+.tabBtn li label {
+  display: block;
+  cursor: pointer;
+  padding: 10px 0;
+  color: #fff;
+  transition: background-color .3s;
+}
+ 
+.tabBtn li label:hover {
+  background-color: rgba(205,92,92,.5);
+}
+ 
+/* :::::: mechanism :::::: */
+ 
+.tabContents section {
   opacity: 0.1;
+  text-align: center;
   transition: opacity 0.3s;
 }
  
@@ -81,9 +64,3 @@
   opacity: 1;
   background-color: #fff;
 }
-
-#tab-1:checked ~ .tabContents { -webkit-transform: translateX(0); transform: translateX(0); }
-#tab-2:checked ~ .tabContents { -webkit-transform: translateX(-20%); transform: translateX(-20%); }
-#tab-3:checked ~ .tabContents { -webkit-transform: translateX(-40%); transform: translateX(-40%); }
-#tab-4:checked ~ .tabContents { -webkit-transform: translateX(-60%); transform: translateX(-60%); }
-#tab-5:checked ~ .tabContents { -webkit-transform: translateX(-80%); transform: translateX(-80%); }
