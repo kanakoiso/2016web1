@@ -43,7 +43,11 @@
   line-height: 1.8;
 }
  
-/* :::::: mechanism :::::: */
+.tabBtn {
+  position: relative;
+  z-index: 1;
+}
+
 .tabContents {
   -webkit-transition: -webkit-transform 0.6s;
   transition: transform 0.6s;
