@@ -33,6 +33,7 @@ body{
      width: 100px;
 }
 
+/*ボタンの色
 #gnav a {
      display: block;
      padding: 10px 0;
@@ -42,14 +43,16 @@ body{
      color: white;
 }
 
+/*光るとき
 #gnav a:hover {
      background: #B0C4DE;
      color: black;
 }
 
+/*ボタン入力中
 #gnav a.selected{
      background: white;
-     color: darkgreen;
+     color: black;
      font-weight: bold;
 }
 
