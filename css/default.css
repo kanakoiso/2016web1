@@ -38,12 +38,12 @@ body{
      padding: 10px 0;
      text-align: center;
      text-decoration: none;
-     background: darkgreen;
+     background: #778899;
      color: white;
 }
 
 #gnav a:hover {
-     background: lightgreen;
+     background: #B0C4DE;
      color: black;
 }
 
