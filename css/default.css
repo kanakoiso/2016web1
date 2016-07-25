@@ -1,66 +1,88 @@
-@charset "utf-8";
-@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+@charset"utf-8";
 
-#wrapper {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
+body{
+     background-color: mediumaquamarine;
 }
- 
-/* :::::: button :::::: */
- 
-.tabBtn {
-  display: table;
-  width: 100%;
-  margin: 0 0 1px;
-  padding: 0;
+
+.breadcrumbs li{
+     display: inline;
+     list-style-type: none;
 }
- 
-.tabBtn li {
-  display: table-cell;
-  width: 20%;
-  border-right: 1px solid #fff;
-  background-color: #20b2aa;
-  text-align: center;
-  vertical-align: middle;
+
+.breadcrumbs li:before{
+    content:">";
 }
- 
-.tabBtn li:last-child {
-  border-right: 0;
+
+.breadcrumbs li:first-child:before{
+    content: "";
 }
- 
-.tabBtn li label {
-  display: block;
-  cursor: pointer;
-  padding: 10px 0;
-  color: #fff;
-  transition: background-color .3s;
+
+#logo ul{
+     overflow: hidden;
 }
- 
-.tabBtn li label:hover {
-  background-color: rgba(205,92,92,.5);
+
+#logo li{
+     float: left;
+     display: table-cell;
+     vertical-align: middle;
+     padding: 0 10px;
+     list-style-type: none;
 }
- 
-/* :::::: mechanism :::::: */
- 
-.tabContents section {
-  opacity: 0.1;
-  text-align: center;
-  transition: opacity 0.3s;
+
+#logo img{
+     width: 100px;
 }
- 
-#tab-1:checked ~ .tabBtn li [for="tab-1"],
-#tab-2:checked ~ .tabBtn li [for="tab-2"],
-#tab-3:checked ~ .tabBtn li [for="tab-3"],
-#tab-4:checked ~ .tabBtn li [for="tab-4"],
-#tab-5:checked ~ .tabBtn li [for="tab-5"] {
-  background-color: #cd5c5c;
+
+#gnav a {
+     display: block;
+     padding: 10px 0;
+     text-align: center;
+     text-decoration: none;
+     background: darkgreen;
+     color: white;
 }
- 
-#tab-1:checked ~ .tabContents section:nth-child(1),
-#tab-2:checked ~ .tabContents section:nth-child(2),
-#tab-3:checked ~ .tabContents section:nth-child(3),
-#tab-4:checked ~ .tabContents section:nth-child(4),
-#tab-5:checked ~ .tabContents section:nth-child(5) {
-  opacity: 1;
-  background-color: #fff;
+
+#gnav a:hover {
+     background: lightgreen;
+     color: black;
+}
+
+#gnav a.selected{
+     background: white;
+     color: darkgreen;
+     font-weight: bold;
+}
+
+#gnav div.img{
+     display: table-cell;
+     vertical-align: middle;
+     background: url(../css_sprite.png)no-repeat;
+     width: 55px;
+     height: 46px;
+}
+
+#gnav div.text{
+     display: table-cell;
+     vertical-align: middle;
+     padding: 10px 5px;
+}
+
+div.img#home{background-position: 0 0px;}
+div.img#content1{background-position: 0 -46px;}
+div.img#content1{background-position: 0 -92px;}
+div.img#help{background-position: 0 -148px;}
+div.img#faq{background-position: 0 -184px;}
+
+#ganv ul{
+     overflow: hidde;
+}
+
+#gnav li{
+     float: left;
+     width: 156px;
+     border-right: white 1px solid;
+}
+
+#gnav li:first-child{
+     border-left: white 1px solid;
 }
